@@ -17,4 +17,5 @@ EXPOSE 80
 ENV NAME World
 
 # Run app.py when the container launches
+# Set the default command for the container to `python app.py`.
 CMD ["python", "app.py"]

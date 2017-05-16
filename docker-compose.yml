@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    build: ./app
+    ports:
+      - "4038:80"
+    volumes:
+      - ./app:/app
+  redis:
+    image: "redis"
+    ports:
+      - "4000:6379"

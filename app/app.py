@@ -4,7 +4,9 @@ import os
 import socket
 
 # Connect to Redis
-redis = Redis(host="redis", db=0, socket_connect_timeout=2, socket_timeout=2)
+# NOTE: port here is the port number inside of docker, the one the container exposes,
+# rather than the actual port used outsite of docker
+redis = Redis(host="redis", port=6379, db=0, socket_connect_timeout=2, socket_timeout=2)
 
 app = Flask(__name__)
 
